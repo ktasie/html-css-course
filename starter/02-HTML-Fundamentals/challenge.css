@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -126,4 +127,44 @@ button:hover {
   background-color: #fff;
   color: #000;
   
+}
+
+
+
+.article-image {
+  float: left;
+  width: 250px
+}
+
+.description {
+  float: left;
+  width: 250px;
+  padding: 10px 20px 0 20px;
+}
+
+.description .price {
+  float: left;
+}
+
+.description .article-shipping {
+  float: right;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.dress {
+  clear: both;
+
+}
+
+
+.details {
+  float: left;
+  width: 250px;
+  padding: 20px;
+}
+
+.details ul {
+  margin-left: 20px;
+  list-style: square;
 }
