@@ -24,6 +24,7 @@
       }
       .el--6 {
         background-color: steelblue;
+        
       }
       .el--7 {
         background-color: yellow;
@@ -40,6 +41,24 @@
         margin: 40px;
 
         /* CSS GRID */
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 300px 200px;
+        row-gap: 40px;
+        column-gap: 10px;
+
+        /* temp */
+        display: none;
+      }
+
+      .el--8 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+      }
+
+      .el--2 {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
       }
 
       .container--2 {
@@ -47,12 +66,22 @@
         font-family: sans-serif;
         background-color: black;
         font-size: 40px;
-        margin: 100px;
+        margin: 40px;
 
-        width: 1000px;
+        width: 700px;
         height: 600px;
 
         /* CSS GRID */
+        display: grid;
+        /* grid-template-columns: repeat(3, 1fr); */
+        grid-template-columns: 125px 200px 125px;
+        /* grid-template-rows: repeat(2, 1fr); */
+        grid-template-rows: 250px 100px;
+
+        justify-content: end;
+        align-content: end;
+
+        justify-items: start;
       }
     </style>
   </head>

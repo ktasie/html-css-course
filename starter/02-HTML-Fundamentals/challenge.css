@@ -14,8 +14,6 @@ body {
   margin: 50px auto;
 }
 
-
-
 .main-article {
   border: 5px solid #000;
   position: relative;
@@ -54,7 +52,7 @@ p {
   color: #9f9898;
   text-transform: uppercase;
   font-size: 14px;
-  margin-bottom: 20px
+  /* margin-bottom: 20px */
 }
 
 article a:link,
@@ -71,7 +69,7 @@ article a:active {
   margin-left: 0;
 }
 
-.product-colors li {
+/* .product-colors li {
   background: black;
   display: inline-block;
   width: 20px;
@@ -79,18 +77,35 @@ article a:active {
   margin-right: 10px;
   margin-top: 30px;
   list-style: none;
+} */
+
+.product-colors {
+  display: flex;
+  gap: 15px;
+  /* justify-content: space-between; */
+  list-style: none;
+  height: 20px;
+  /* height: 20px; */
+}
+
+.product-colors li {
+  flex: 0 0 23px;
+}
+
+.product-colors li:nth-child(1) {
+  background-color: black;
 }
 
 .product-colors li:nth-child(2) {
-  background-color: blue;;
+  background-color: blue;
 }
 
 .product-colors li:nth-child(3) {
-  background-color: red;;
+  background-color: red;
 }
 
 .product-colors li:nth-child(4) {
-  background-color: orange;;
+  background-color: orange;
 }
 
 .product-colors li:nth-child(5) {
@@ -102,8 +117,8 @@ article a:active {
 }
 
 h4 {
-  margin-top: 20px;
-  margin-bottom: 20px;
+  /* margin-top: 20px; */
+  /* margin-bottom: 20px; */
 }
 
 article ul {
@@ -126,11 +141,10 @@ button {
 button:hover {
   background-color: #fff;
   color: #000;
-  
 }
 
-
-
+/*  Using Floats */
+/*
 .article-image {
   float: left;
   width: 250px
@@ -167,4 +181,45 @@ button:hover {
 .details ul {
   margin-left: 20px;
   list-style: square;
+}
+  */
+
+/* CSS Grid */
+.main-article {
+  display: grid;
+  grid-template-columns: 250px 1fr 1fr;
+  column-gap: 25px;
+}
+
+.article-title {
+  grid-column: 1 / -1;
+}
+
+button {
+  grid-column: 1 / -1;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;;
+}
+
+
+
+.description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.details ul {
+  margin-left: 20px;;
 }
